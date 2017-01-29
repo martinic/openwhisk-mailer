@@ -1,0 +1,10 @@
+.editorconfig
+.npmignore
+**/.gitkeep
+
+# compiled output
+openwhisk-mailer.zip
+
+# config
+transport.js
+mail.json
