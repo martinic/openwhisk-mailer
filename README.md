@@ -1,16 +1,18 @@
-# openwhisk-mailer
+# openwhisk-mailer [![Greenkeeper badge](https://badges.greenkeeper.io/martinic/openwhisk-mailer.svg)](https://greenkeeper.io/)
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/martinic/openwhisk-mailer.svg)](https://greenkeeper.io/)
+An OpenWhisk Mailer Action
 
-> An openWhisk Action
+## Prerequisites
+- OpenWhisk command line interface (CLI) called `wsk`
+- npm install -g bestzip
 
-npm install -g bestzip
+## Installation
+- npm install
+- npm run create
+- npm run update (Only for development)
+- npm run invoke
 
-npm run create
-npm run update
-npm run invoke
-
-# config
+## config
 
 transport.js
 ```
