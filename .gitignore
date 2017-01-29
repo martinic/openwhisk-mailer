@@ -10,5 +10,4 @@ openwhisk-mailer.zip
 npm-debug.log
 
 # config
-transport.js
-mail.json
+params.json

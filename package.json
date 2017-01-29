@@ -4,14 +4,23 @@
   "main": "index.js",
   "author": "Martin Broerse",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/martinic/openwhisk-mailer.git"
+  },
+  "keywords": [
+    "openwhisk-package",
+    "OpenWhisk",
+    "Mailer"
+  ],
   "dependencies": {
     "nodemailer": "2.7.2",
     "nodemailer-ses-transport": "1.5.0"
   },
   "scripts": {
-    "zip": "bestzip openwhisk-mailer.zip node_modules index.js package.json transport.js",
+    "zip": "bestzip openwhisk-mailer.zip node_modules index.js package.json",
     "create": "npm run zip && wsk action create openwhisk-mailer --kind nodejs:default openwhisk-mailer.zip",
     "update": "npm run zip && wsk action update openwhisk-mailer --kind nodejs:default openwhisk-mailer.zip",
-    "invoke": "wsk action invoke --blocking --result openwhisk-mailer --param-file mail.json"
+    "invoke": "wsk action invoke --blocking --result openwhisk-mailer --param-file params.json"
   }
 }

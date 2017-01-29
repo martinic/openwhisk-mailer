@@ -1,4 +1,5 @@
-# openwhisk-mailer [![Greenkeeper badge](https://badges.greenkeeper.io/martinic/openwhisk-mailer.svg)](https://greenkeeper.io/)
+# openwhisk-mailer
+[![Greenkeeper badge](https://badges.greenkeeper.io/martinic/openwhisk-mailer.svg)](https://greenkeeper.io/)
 
 An OpenWhisk Mailer Action
 
@@ -14,22 +15,20 @@ An OpenWhisk Mailer Action
 
 ## config
 
-transport.js
-```
-module.exports = {
-  transport: 'ses', // loads nodemailer-ses-transport
-  accessKeyId: 'ABCDEFGHIJKLMNOPQRST',
-  secretAccessKey: 'TUV/XYZabcd8RbnmNxOyb5BsVWeNnK721xytIVwKkGK'
-};
-```
-
-json input
+json input (`params.json`)
 ```
 {
-  "from": "foo@bar.com",
-  "to": "bar@foo.com",
-  "subject": "Send Email Using OpenWhisk",
-  "text": "OpenWhisk New world for me",
-  "html": "<b>OpenWhisk New world for me</b>"
+  "transporter": {
+    "transport": "ses",
+    "accessKeyId": "AABCDEFGHIJKLMNOPQRST",
+    "secretAccessKey": "TUV/XYZabcd8RbnmNxOyb5BsVWeNnK721xytIVwKkGK"
+  },
+  "mail":{
+    "from": "foo@bar.com",
+    "to": "bar@foo.com",
+    "subject": "Send Email Using OpenWhisk",
+    "text": "OpenWhisk New world for me",
+    "html": "<b>OpenWhisk New world for me</b>"
+  }
 }
 ```

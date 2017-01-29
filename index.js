@@ -1,11 +1,10 @@
 var nodemailer = require('nodemailer');
-var transport = require('./transport.js');
 
-function myAction(mail) {
+function main(params) {
   return new Promise(function(resolve, reject) {
-    var transporter = nodemailer.createTransport(transport);
+    var transporter = nodemailer.createTransport(params.transporter);
 
-    transporter.sendMail(mail, function(error, info){
+    transporter.sendMail(params.mail, function(error, info){
       transporter.close();
       if(error){
         console.log(error);
@@ -17,11 +16,11 @@ function myAction(mail) {
   });
 }
 
-exports.main = myAction;
+exports.main = main;
 
 if (require.main === module) {
   var fs = require("fs");
-  var contents = fs.readFileSync("mail.json");
-  var mail = JSON.parse(contents);
-  myAction(mail);
+  var contents = fs.readFileSync("params.json");
+  var params = JSON.parse(contents);
+  main(params);
 }

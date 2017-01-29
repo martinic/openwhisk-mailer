@@ -6,5 +6,4 @@
 openwhisk-mailer.zip
 
 # config
-transport.js
-mail.json
+params.json
