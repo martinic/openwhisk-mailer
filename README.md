@@ -1,5 +1,7 @@
 # openwhisk-mailer
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/martinic/openwhisk-mailer.svg)](https://greenkeeper.io/)
+
 > An openWhisk Action
 
 npm install -g bestzip
