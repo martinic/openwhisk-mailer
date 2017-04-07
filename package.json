@@ -15,7 +15,7 @@
   ],
   "dependencies": {
     "nodemailer": "3.1.5",
-    "nodemailer-ses-transport": "1.5.0"
+    "nodemailer-ses-transport": "1.5.1"
   },
   "scripts": {
     "zip": "bestzip openwhisk-mailer.zip node_modules index.js package.json",
