@@ -1,6 +1,6 @@
 {
   "name": "openwhisk-mailer",
-  "version": "0.1.0-alpha.2",
+  "version": "0.1.0-alpha.3",
   "main": "index.js",
   "author": "Martin Broerse",
   "license": "MIT",
@@ -14,8 +14,8 @@
     "Mailer"
   ],
   "dependencies": {
-    "nodemailer": "2.7.2",
-    "nodemailer-ses-transport": "1.5.0"
+    "nodemailer": "6.1.1",
+    "nodemailer-ses-transport": "1.5.1"
   },
   "scripts": {
     "zip": "bestzip openwhisk-mailer.zip node_modules index.js package.json",
